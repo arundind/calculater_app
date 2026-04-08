@@ -6,7 +6,7 @@
   margin: 3rem auto;
   padding: 1.5rem;
   border-radius: 1rem;
-  background: #1e1e2f;
+  background: #c80878;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -88,4 +88,6 @@ button:active {
 .backspace:hover {
   background: #fb8c00;
 }
-
+.h1{
+  color: #088908;
+}

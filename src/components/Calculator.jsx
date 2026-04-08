@@ -38,7 +38,9 @@ const Calculator = () => {
   ];
 
   return (
+
     <div className="calculator">
+       <h1>Calculator</h1>
       <input
         type="text"
         value={input}
