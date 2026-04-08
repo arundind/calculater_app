@@ -4,36 +4,35 @@
   padding: 2rem;
   text-align: center;
 }
-/* App.css */
 
+/* App Container */
 .app-container {
   position: relative;
-  width: 200vh;
-  height: 200vh;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* Gradient background */
   background: linear-gradient(135deg, #0ddc33, #00f2fe);
 }
 
-/* Bubble container */
+/* Bubble base */
 .background-bubbles span {
   position: absolute;
   display: block;
   bottom: -150px;
-  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   animation: bubbleMove 20s linear infinite;
 }
 
-/* Different bubble sizes & positions */
+/* 🌈 Multi-color bubbles */
 .background-bubbles span:nth-child(1) {
   left: 10%;
   width: 60px;
   height: 60px;
+  background: rgba(255, 99, 132, 0.5);
   animation-duration: 18s;
 }
 
@@ -41,6 +40,7 @@
   left: 25%;
   width: 40px;
   height: 40px;
+  background: rgba(54, 162, 235, 0.5);
   animation-duration: 22s;
 }
 
@@ -48,6 +48,7 @@
   left: 50%;
   width: 80px;
   height: 80px;
+  background: rgba(255, 206, 86, 0.5);
   animation-duration: 25s;
 }
 
@@ -55,6 +56,7 @@
   left: 70%;
   width: 50px;
   height: 50px;
+  background: rgba(75, 192, 192, 0.5);
   animation-duration: 20s;
 }
 
@@ -62,17 +64,38 @@
   left: 90%;
   width: 30px;
   height: 30px;
+  background: rgba(153, 102, 255, 0.5);
   animation-duration: 17s;
+}
+
+/* Extra bubbles for richer look */
+.background-bubbles span:nth-child(6) {
+  left: 15%;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 159, 64, 0.5);
+  animation-duration: 19s;
+}
+
+.background-bubbles span:nth-child(7) {
+  left: 80%;
+  width: 70px;
+  height: 70px;
+  background: rgba(0, 255, 127, 0.5);
+  animation-duration: 23s;
 }
 
 /* Animation */
 @keyframes bubbleMove {
   0% {
-    transform: translateY(0) scale(1);
+    transform: translateY(0) translateX(0) scale(1);
     opacity: 0.6;
   }
+  50% {
+    transform: translateY(-500px) translateX(30px) scale(1.1);
+  }
   100% {
-    transform: translateY(-1000px) scale(1.2);
+    transform: translateY(-1000px) translateX(-30px) scale(1.2);
     opacity: 0;
   }
 }

@@ -40,7 +40,7 @@ const Calculator = () => {
   return (
 
     <div className="calculator">
-       <h1>Calculator</h1>
+      <h1 style={{ color: 'white' }}>Calculator</h1>
       <input
         type="text"
         value={input}
